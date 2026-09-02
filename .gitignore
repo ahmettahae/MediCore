@@ -1,0 +1,56 @@
+## ==========================================
+## MediCore - Master .gitignore
+## ==========================================
+
+# ── 1. .NET / C# Build & Compiler Outputs ──
+bin/
+obj/
+publish/
+[Bb]in/
+[Oo]bj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+TestResults/
+*.Generated.cs
+
+# ── 2. Node.js & React / Vite Outputs ──
+node_modules/
+dist/
+dist-ssr/
+build/
+.npm
+*.tsbuildinfo
+.eslintcache
+
+# ── 3. SQLite Database Files ──
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# ── 4. Logs & Diagnostic Files ──
+Logs/
+logs/
+**/Logs/
+**/logs/
+*.log
+medicore_log-*.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── 5. OS & Environment Files ──
+.DS_Store
+Thumbs.db
+Desktop.ini
+.env.local
+.env.*.local
+*.pcap
+scratch/
