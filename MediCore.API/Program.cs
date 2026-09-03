@@ -108,14 +108,13 @@ using (var scope = app.Services.CreateScope())
     DbInitializer.Initialize(dbContext);
 }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline (Swagger'ı hem canlıda hem yerelde aktif tut)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MediCore API v1");
+    c.RoutePrefix = "swagger";
+});
 
 // 4. Middleware Sıralaması (Hayati Önem Taşır)
 app.UseCors("ReactIzin");
@@ -123,6 +122,16 @@ app.UseAuthentication(); // Kimlik Doğrulama (Kimsin?)
 app.UseAuthorization();  // Yetkilendirme (Nereye girebilirsin?)
 
 app.MapControllers();
+
+// Kök Adres Sağlık Kontrolü (Health Check Endpoint)
+app.MapGet("/", () => Results.Ok(new
+{
+    name = "MediCore Klinik & Bakım Bilgi Sistemi API",
+    status = "Online",
+    version = "1.0.0",
+    time = DateTime.UtcNow,
+    swagger = "/swagger"
+}));
 
 // KlinikHub Endpoint Eşlemesi
 app.MapHub<KlinikHub>("/hub/klinik");
