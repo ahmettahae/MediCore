@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1300" height="750" viewBox="0 0 1300 750" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="marBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1118"/>
+      <stop offset="100%" stop-color="#101F30"/>
+    </linearGradient>
+    <filter id="fShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1300" height="750" fill="url(#marBg)"/>
+
+  <!-- Başlık -->
+  <g transform="translate(650, 45)" text-anchor="middle">
+    <text font-size="24" font-weight="900" fill="#FFFFFF">SAATLİK İLAÇ DAĞITIMI (MAR) SÜREÇ VE DURUM MAKİNESİ</text>
+    <text y="24" font-size="13.5" font-weight="600" fill="#34D399">Medication Administration Record: Planlama &gt; Uygulama &gt; Doğrulama &gt; Stok Düşümü</text>
+  </g>
+
+  <!-- 1. Adım: Hekim Reçetesi -->
+  <g transform="translate(80, 200)" filter="url(#fShadow)">
+    <rect width="220" height="130" rx="12" fill="#1E293B" stroke="#6D28D9" stroke-width="2"/>
+    <rect width="220" height="32" rx="12" fill="#6D28D9"/>
+    <text x="110" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">1. HEKİM İSTEMİ (REÇETE)</text>
+    <text x="110" y="60" text-anchor="middle" font-size="11.5" fill="#E2E8F0">İlaç, Dozaj ve Form Seçimi</text>
+    <text x="110" y="80" text-anchor="middle" font-size="11" fill="#A78BFA">Öğünler: Sabah/Öğle/Akşam/Gece</text>
+    <text x="110" y="100" text-anchor="middle" font-size="11" fill="#94A3B8">Başlangıç &amp; Bitiş Tarihleri</text>
+  </g>
+
+  <!-- Ok 1 -> 2 -->
+  <line x1="300" y1="265" x2="360" y2="265" stroke="#94A3B8" stroke-width="2.5"/>
+  <polygon points="360,265 350,260 350,270" fill="#94A3B8"/>
+
+  <!-- 2. Adım: Günlük MAR Matrisi -->
+  <g transform="translate(360, 200)" filter="url(#fShadow)">
+    <rect width="230" height="130" rx="12" fill="#1E293B" stroke="#0284C7" stroke-width="2"/>
+    <rect width="230" height="32" rx="12" fill="#0284C7"/>
+    <text x="115" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">2. GÜNLÜK MAR ÇİZELGESİ</text>
+    <text x="115" y="60" text-anchor="middle" font-size="11.5" fill="#E2E8F0">Sistem Otomatik Oluşturur</text>
+    <text x="115" y="80" text-anchor="middle" font-size="11" fill="#7DD3FC">Durum: "Bekliyor / Planlandı"</text>
+    <text x="115" y="100" text-anchor="middle" font-size="11" fill="#94A3B8">Klinik Oda &amp; Yatak Sıralı</text>
+  </g>
+
+  <!-- Ok 2 -> 3 -->
+  <line x1="590" y1="265" x2="650" y2="265" stroke="#94A3B8" stroke-width="2.5"/>
+  <polygon points="650,265 640,260 640,270" fill="#94A3B8"/>
+
+  <!-- 3. Adım: Hemşire Uygulaması & Karar -->
+  <g transform="translate(650, 200)" filter="url(#fShadow)">
+    <rect width="240" height="130" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="240" height="32" rx="12" fill="#D97706"/>
+    <text x="120" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">3. HEMŞİRE UYGULAMA AN</text>
+    <text x="120" y="60" text-anchor="middle" font-size="11.5" fill="#E2E8F0">Hasta Kimlik Doğrulama</text>
+    <text x="120" y="80" text-anchor="middle" font-size="11" fill="#FDE68A">İlaç &amp; Dozaj Eşleşmesi</text>
+    <text x="120" y="102" text-anchor="middle" font-size="11" font-weight="bold" fill="#FBBF24">Tek Tıkla Durum Güncelleme</text>
+  </g>
+
+  <!-- 3 Karar Dalı (Yeşil, Kırmızı, Sarı) -->
+  <!-- Dal 1: Uygulandı -->
+  <path d="M 890,240 L 980,140" stroke="#10B981" stroke-width="2.5" fill="none"/>
+  <polygon points="980,140 970,140 975,148" fill="#10B981"/>
+
+  <g transform="translate(980, 90)" filter="url(#fShadow)">
+    <rect width="260" height="100" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#6EE7B7">✓ DURUM: UYGULANDI</text>
+    <text x="130" y="52" text-anchor="middle" font-size="11" fill="#D1FAE5">• Otomatik Stok Düşümü (Stok - 1)</text>
+    <text x="130" y="70" text-anchor="middle" font-size="11" fill="#D1FAE5">• Uygulayan Personel &amp; Saat Logu</text>
+    <text x="130" y="88" text-anchor="middle" font-size="10.5" fill="#A7F3D0">• Yeşil Renk Kodu ve Tamamlandı İkonu</text>
+  </g>
+
+  <!-- Dal 2: Hasta Reddetti -->
+  <line x1="890" y1="265" x2="980" y2="265" stroke="#EF4444" stroke-width="2.5"/>
+  <polygon points="980,265 970,260 970,270" fill="#EF4444"/>
+
+  <g transform="translate(980, 215)" filter="url(#fShadow)">
+    <rect width="260" height="100" rx="10" fill="#881337" stroke="#EF4444" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#FCA5A5">✕ DURUM: HASTA REDDETTİ</text>
+    <text x="130" y="52" text-anchor="middle" font-size="11" fill="#FECDD3">• Zorunlu Ret Nedeni Açıklaması</text>
+    <text x="130" y="70" text-anchor="middle" font-size="11" fill="#FECDD3">• Stok Düşmez, İlaç Karantinaya Alınır</text>
+    <text x="130" y="88" text-anchor="middle" font-size="10.5" fill="#F87171">• Hekime Sistem Bildirimi Fırlatılır</text>
+  </g>
+
+  <!-- Dal 3: Ertelendi / Uyuyor -->
+  <path d="M 890,290 L 980,390" stroke="#F59E0B" stroke-width="2.5" fill="none"/>
+  <polygon points="980,390 975,382 970,390" fill="#F59E0B"/>
+
+  <g transform="translate(980, 340)" filter="url(#fShadow)">
+    <rect width="260" height="100" rx="10" fill="#78350F" stroke="#F59E0B" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#FDE68A">⏸ DURUM: ERTELENDİ</text>
+    <text x="130" y="52" text-anchor="middle" font-size="11" fill="#FEF3C7">• Geçici Neden (Örn: Hasta Uyuyor)</text>
+    <text x="130" y="70" text-anchor="middle" font-size="11" fill="#FEF3C7">• Bir Sonraki Tura Hatırlatıcı Bırakılır</text>
+    <text x="130" y="88" text-anchor="middle" font-size="10.5" fill="#FCD34D">• Sarı Rozet ve Bekleyen İlaç Sayacı</text>
+  </g>
+
+  <!-- Alt Panel: Güvenlik ve Doğruluk Garantileri -->
+  <g transform="translate(100, 500)" filter="url(#fShadow)">
+    <rect width="1100" height="170" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="550" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#38BDF8">MEDİCORE MAR SİSTEMİNİN SAĞLADIĞI KLİNİK GÜVENCELER</text>
+
+    <g transform="translate(50, 60)" font-size="11.5" fill="#CBD5E1">
+      <text y="0" font-weight="bold" fill="#FFFFFF">1. Mükerrer İlaç Engeli:</text>
+      <text y="20" fill="#94A3B8">Bir öğünde uygulanmış ilaç tekrar işaretlenemez; mükerrer doz riski sıfırlanır.</text>
+
+      <text y="50" font-weight="bold" fill="#FFFFFF">2. Kritik Stok Otomasyonu:</text>
+      <text y="70" fill="#94A3B8">İlaç uygulandığında stok kritik eşiğe düşerse sistem otomatik ikaz üretir.</text>
+    </g>
+
+    <g transform="translate(600, 60)" font-size="11.5" fill="#CBD5E1">
+      <text y="0" font-weight="bold" fill="#FFFFFF">3. Şeffaf Denetim İzi (Audit Trail):</text>
+      <text y="20" fill="#94A3B8">Her ilaç hareketi hemşirenin kullanıcı adı ve zaman damgası ile loglanır.</text>
+
+      <text y="50" font-weight="bold" fill="#FFFFFF">4. Hafif ve Kesintisiz Arayüz:</text>
+      <text y="70" fill="#94A3B8">Ağır kütüphaneler yerine saf CSS grid ile servis genelinde hızlı navigasyon.</text>
+    </g>
+  </g>
+</svg>
