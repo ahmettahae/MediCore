@@ -2,7 +2,7 @@
 
 MediCore; huzurevleri, yaşlı bakım merkezleri ve yataklı klinik tesislerde hasta takibi, vital bulgu izlemi, hekim muayeneleri, saatlik ilaç dağıtımı (MAR) ve nöbet operasyonlarını tek bir merkezden yönetmek üzere geliştirilmiş tam yığın (full-stack) bir sağlık bilgi sistemidir.
 
-Proje, T.C. Cumhurbaşkanlığı İletişim Başkanlığı staj programı kapsamında geliştirilmiştir.
+Proje, T.C. Cumhurbaşkanlığı Genel Sekreterliği Yazılım Daire Başkanlığı Staj Programı kapsamında geliştirilmiştir.
 
 ---
 
@@ -84,4 +84,4 @@ Sisteme test amacıyla giriş yapmak için tanımlanmış roller:
 ## Geliştirici
 
 * **Geliştirici:** Ahmet Taha Erol
-* **Kurum:** T.C. Cumhurbaşkanlığı İletişim Başkanlığı Staj Programı
+* **Kurum:** T.C. Cumhurbaşkanlığı Genel Sekreterliği Staj Programı
