@@ -15,9 +15,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Mevcut hazır veritabanını konteynere dahil et
-COPY medicore.db .
-
 # Render'ın beklediği port yapılandırması
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
